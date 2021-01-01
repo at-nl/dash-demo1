@@ -334,6 +334,16 @@ app.layout = html.Div(
                 html.Div(
                     [
                         html.P(
+                            html.A(
+                                # children = [html.P('Click here for data source',id='data-source-text')],
+                                'Click here for data source',
+                                href = 'https://github.com/owid/covid-19-data/tree/master/public/data',
+                                id = 'data-source-link',
+                                className = 'data-source'
+                            ),
+                            className="control_label"
+                        ),
+                        html.P(
                             [html.Strong("Filter by Date Range:")],
                             className="control_label",
                             title = metadata[metadata.column == 'date']['description'].tolist()[0]
